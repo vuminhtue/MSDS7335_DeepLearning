@@ -35,75 +35,59 @@ y = data['SalePrice']
 # Initialize KFold
 kf = KFold(n_splits=10, shuffle=True, random_state=42)
 
-# Initialize lists to store performance metrics
-train_mse_scores = []
-test_mse_scores = []
-train_r2_scores = []
-test_r2_scores = []
-feature_importance_list = []
+# Define lambda values to try
+lambda_values = np.logspace(-6, 6, 60)  # Creates 20 evenly spaced values on log scale from 10^-6 to 10^6
+mean_test_rmse_scores = []
 
-# Perform 10-fold cross validation
-for fold, (train_idx, test_idx) in enumerate(kf.split(X), 1):
-    # Split data for this fold
-    X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
-    y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
+# For each lambda value
+for lambda_val in lambda_values:
+    # Initialize lists to store performance metrics for this lambda
+    test_rmse_scores = []
     
-    # Scale the features
-    scaler = StandardScaler()
-    X_train_scaled = scaler.fit_transform(X_train)
-    X_test_scaled = scaler.transform(X_test)
+    # Perform 10-fold cross validation
+    for fold, (train_idx, test_idx) in enumerate(kf.split(X), 1):
+        # Split data for this fold
+        X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
+        y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
+        
+        # Scale the features
+        scaler = StandardScaler()
+        X_train_scaled = scaler.fit_transform(X_train)
+        X_test_scaled = scaler.transform(X_test)
+        
+        # Train Ridge model with current lambda
+        ridge = Ridge(alpha=lambda_val)
+        ridge.fit(X_train_scaled, y_train)
+        
+        # Make predictions
+        y_pred_test = ridge.predict(X_test_scaled)
+        
+        # Calculate RMSE
+        test_rmse = np.sqrt(mean_squared_error(y_test, y_pred_test))
+        test_rmse_scores.append(test_rmse)
     
-    # Train Ridge model
-    ridge = Ridge(alpha=1.0)
-    ridge.fit(X_train_scaled, y_train)
-    
-    # Make predictions
-    y_pred_train = ridge.predict(X_train_scaled)
-    y_pred_test = ridge.predict(X_test_scaled)
-    
-    # Calculate performance metrics
-    train_mse = mean_squared_error(y_train, y_pred_train)
-    test_mse = mean_squared_error(y_test, y_pred_test)
-    train_r2 = r2_score(y_train, y_pred_train)
-    test_r2 = r2_score(y_test, y_pred_test)
-    
-    # Store metrics
-    train_mse_scores.append(train_mse)
-    test_mse_scores.append(test_mse)
-    train_r2_scores.append(train_r2)
-    test_r2_scores.append(test_r2)
-    
-    # Store feature importance
-    feature_importance_list.append(pd.DataFrame({
-        'Feature': X_train.columns,
-        'Coefficient': np.abs(ridge.coef_)
-    }))
-    
-    print(f"\nFold {fold} Results:")
-    print(f"Training MSE: {train_mse:.2f}")
-    print(f"Test MSE: {test_mse:.2f}")
-    print(f"Training R²: {train_r2:.4f}")
-    print(f"Test R²: {test_r2:.4f}")
+    # Calculate mean RMSE across folds for this lambda
+    mean_test_rmse = np.mean(test_rmse_scores)
+    mean_test_rmse_scores.append(mean_test_rmse)
+    print(f"Lambda = {lambda_val:.6f}, Mean Test RMSE = {mean_test_rmse:.2f}")
 
-# Calculate and print mean and std of performance metrics
-print("\nOverall Cross-Validation Results:")
-print(f"Mean Training MSE: {np.mean(train_mse_scores):.2f} (±{np.std(train_mse_scores):.2f})")
-print(f"Mean Test MSE: {np.mean(test_mse_scores):.2f} (±{np.std(test_mse_scores):.2f})")
-print(f"Mean Training R²: {np.mean(train_r2_scores):.4f} (±{np.std(train_r2_scores):.4f})")
-print(f"Mean Test R²: {np.mean(test_r2_scores):.4f} (±{np.std(test_r2_scores):.4f})")
+# Find the best lambda
+best_lambda_idx = np.argmin(mean_test_rmse_scores)
+best_lambda = lambda_values[best_lambda_idx]
+best_rmse = mean_test_rmse_scores[best_lambda_idx]
 
-# Calculate average feature importance across folds
-avg_feature_importance = pd.concat(feature_importance_list).groupby('Feature')['Coefficient'].mean().reset_index()
-top_10_features = avg_feature_importance.nlargest(10, 'Coefficient')
+print(f"\nBest Lambda: {best_lambda:.6f}")
+print(f"Best RMSE: {best_rmse:.2f}")
 
-print("\nTop 10 Most Important Features (Averaged across folds):")
-print(top_10_features)
-
-# Plot average feature importance
-plt.figure(figsize=(12, 6))
-plt.bar(range(len(top_10_features)), top_10_features['Coefficient'])
-plt.xticks(range(len(top_10_features)), top_10_features['Feature'], rotation=45, ha='right')
-plt.title('Top 10 Feature Importance (Ridge) - Averaged Across 10 Folds')
+# Plot RMSE vs Lambda
+plt.figure(figsize=(10, 6))
+plt.semilogx(lambda_values, mean_test_rmse_scores, '-o')
+plt.plot(best_lambda, best_rmse, 'r*', markersize=15, label=f'Best λ = {best_lambda:.6f}')
+plt.xlabel('Lambda (α)')
+plt.ylabel('Mean Test RMSE')
+plt.title('Ridge Regression: RMSE vs Lambda')
+plt.grid(True)
+plt.legend()
 plt.tight_layout()
-plt.savefig('ridge_feature_importance.png')
+plt.savefig('ridge_lambda_vs_rmse.png')
 plt.close() 

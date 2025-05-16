@@ -1,0 +1,49 @@
+\documentclass[12pt]{report}
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{url}
+\usepackage[margin=1in]{geometry}
+
+% Document settings
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Ames Housing Price Prediction Analysis},
+    pdfauthor={MSDS 7335},
+}
+
+% Title page information
+\title{
+    {\Large MSDS 7335 - Machine Learning II}\\[0.5cm]
+    {\huge Comparative Analysis of Regression Models\\for Ames Housing Price Prediction}\\[0.5cm]
+}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+% Generate title page
+\maketitle
+
+% Table of contents
+\tableofcontents
+\newpage
+
+% Include Chapter 1
+\input{Chapter1}
+
+% Include Chapter 2
+\input{Chapter2}
+
+% Include Chapter 3
+\input{Chapter3}
+\end{document} 
