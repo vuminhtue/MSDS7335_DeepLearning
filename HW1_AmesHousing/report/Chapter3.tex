@@ -3,20 +3,21 @@
 \section{Introduction}
 This chapter presents three different modeling approaches for predicting house prices in the Ames Housing dataset:
 \begin{itemize}
-    \item Ridge Regression (L2 regularization)
-    \item Lasso Regression (L1 regularization)
-    \item Neural Network Regression
+    \item Ridge Regression (L2 regularization) with 10-fold cross validation
+    \item Lasso Regression (L1 regularization) with 10-fold cross validation
+    \item Neural Network Regression 
 \end{itemize}
 
 Each model offers unique advantages and characteristics in handling the complexities of house price prediction.
-
+L1 and L2 regularization are used to prevent overfitting and improve the generalization of the model and the top 10 features are selected.
 \section{Ridge Regression}
 Ridge regression addresses multicollinearity by adding an L2 penalty term to the loss function. This approach is particularly useful for our dataset given the high correlations observed between various features.
 
 \subsection{Hyperparameter Tuning}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../ridge_lambda_vs_rmse.png}
+    \includegraphics[width=1.0\textwidth]{../figures/ridge_lambda_vs_rmse.png}
     \caption{Effect of Ridge Regularization Parameter on Model Performance}
     \label{fig:ridge_lambda}
 \end{figure}
@@ -32,7 +33,7 @@ The analysis of different lambda values reveals:
 \subsection{Feature Importance}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../ridge_feature_importance.png}
+    \includegraphics[width=1.0\textwidth]{../figuresridge_feature_importance.png}
     \caption{Feature Importance in Ridge Regression}
     \label{fig:ridge_importance}
 \end{figure}
@@ -51,7 +52,7 @@ Lasso regression performs both regularization and feature selection through L1 p
 \subsection{Parameter Optimization}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../lasso_lambda_vs_rmse.png}
+    \includegraphics[width=1.0\textwidth]{../figures/lasso_lambda_vs_rmse.png}
     \caption{Impact of Lasso Regularization Parameter on RMSE}
     \label{fig:lasso_lambda}
 \end{figure}
@@ -67,7 +68,7 @@ The lambda parameter analysis shows:
 \subsection{Feature Selection}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../lasso_feature_importance.png}
+    \includegraphics[width=1.0\textwidth]{../figures/lasso_feature_importance.png}
     \caption{Feature Importance from Lasso Regression}
     \label{fig:lasso_importance}
 \end{figure}
@@ -86,7 +87,7 @@ A deep learning approach using neural networks offers the potential to capture c
 \subsection{Network Architecture and Training}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../neural_network_training.png}
+    \includegraphics[width=1.0\textwidth]{../figures/neural_network_training.png}
     \caption{Neural Network Training Progress}
     \label{fig:nn_training}
 \end{figure}
@@ -102,7 +103,7 @@ The neural network implementation:
 \section{Model Comparison}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../model_comparison.png}
+    \includegraphics[width=1.0\textwidth]{../figures/model_comparison.png}
     \caption{Performance Comparison Across Models}
     \label{fig:model_comparison}
 \end{figure}

@@ -35,6 +35,7 @@ The analysis of missing values reveals several patterns:
     \item Features like Alley (93.8\% missing) and Fence (80.7\% missing) are also frequently missing, indicating these are optional features
     \item Most missing values appear in categorical variables describing specific features that may not be present in all houses
     \item For modeling purposes, missing values in categorical variables will be treated as 'None' or 'Not Available'
+    \item For features with more than 50\% missing values, we will drop them from the dataset   
 \end{itemize}
 
 \section{Target Variable Analysis}
@@ -49,9 +50,9 @@ The sale price distribution exhibits several key characteristics:
 \begin{itemize}
     \item Right-skewed distribution with a mean of \$180,921 and median of \$163,000
     \item Significant positive skewness (1.88) indicating more lower-priced homes
-    \item Presence of high-value outliers above \$400,000
+    \item Box-Plot shows presence of many high-value outliers above \$400,000
     \item Q-Q plot shows deviation from normality, suggesting log transformation for modeling
-    \item Price range spans from \$34,900 to \$755,000, showing wide market diversity
+    \item Price range spans from \$34,900 to \$755,000, showing wide market diversity and large standard deviation
 \end{itemize}
 
 \section{Feature Analysis}
@@ -65,13 +66,14 @@ The sale price distribution exhibits several key characteristics:
 
 Key observations from numerical features:
 \begin{itemize}
-    \item Ground Living Area (GrLivArea) shows right-skewed distribution with most homes between 800-2000 sq ft
-    \item Lot Area exhibits extreme right skew with several outliers, suggesting some very large properties
+    \item Ground Living Area (GrLivArea) and first floor square footage (1stFlrSF) shows right-skewed distribution with most homes between 800-2000 sq ft
+    \item Lot Area exhibits extreme right skew with several outliers, suggesting some very large properties 
     \item Year Built shows multiple peaks, corresponding to different development periods in Ames
     \item Garage and Basement areas show similar patterns, with most homes having these features
 \end{itemize}
 
 \subsection{Feature Correlations}
+The Correlation Matrix is shown below that compare the cross-correlations between the features and the target variable Sale Price:
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{figures/correlation_matrix.png}
@@ -136,6 +138,7 @@ Outlier detection reveals:
 \end{itemize}
 
 \section{Feature Importance}
+We use the non-parametric approach of Random Forest to analyze the feature importance. The plot below shows the importance of each feature:
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{figures/feature_importance.png}
