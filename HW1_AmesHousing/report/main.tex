@@ -81,16 +81,17 @@
         \item[3.3.1] Parameter Optimization
         \item[3.3.2] Feature Selection
         \end{itemize}
-    \item[3.4] Neural Network Regression
+    \item[3.4] Random Forest Regression
         \begin{itemize}
-        \item[3.4.1] Network Architecture and Training
+        \item[3.4.1] Model Performance
         \end{itemize}
-    \item[3.5] Model Comparison
+    \item[3.5] Neural Network Regression
         \begin{itemize}
-        \item[3.5.1] Prediction Analysis
+        \item[3.5.1] Network Architecture and Training
         \end{itemize}
-    \item[3.6] Key Findings and Recommendations
-    \item[3.7] Future Improvements
+    \item[3.6] Model Comparison
+    \item[3.7] Key Findings and Recommendations
+    \item[3.8] Future Improvements
     \end{itemize}
 \end{itemize}
 
@@ -162,7 +163,13 @@ The analysis of missing values reveals several patterns:
     \item Pool QC has the highest percentage of missing values (99.5\%), which is expected as most houses in Iowa don't have pools
     \item Features like Alley (93.8\% missing) and Fence (80.7\% missing) are also frequently missing, indicating these are optional features
     \item Most missing values appear in categorical variables describing specific features that may not be present in all houses
-    \item For modeling purposes, missing values in categorical variables will be treated as 'None' or 'Not Available'
+    \item For our modeling approach, we excluded variables with excessive missing values: Pool QC, Alley, Fence, Fireplace Qu, Misc Feature, and MasVnrType
+    \item For remaining missing values, we applied two different imputation strategies:
+    \begin{itemize}
+        \item Numerical variables: Imputed with mean values
+        \item Categorical variables: Imputed with most frequent values
+    \end{itemize}
+    \item This approach preserves the maximum amount of information while handling the missing data appropriately
 \end{itemize}
 
 \section{Target Variable Analysis}
@@ -236,7 +243,7 @@ where $R^2_j$ is the R-squared value obtained by regressing the j-th feature aga
 \begin{itemize}
     \item VIF = 1: No correlation
     \item 1 < VIF < 5: Moderate correlation
-    \item VIF ≥ 5: High correlation (potential multicollinearity problem)
+    \item VIF ≥ 5: Potential High correlation (potential multicollinearity problem): acceptable
     \item VIF ≥ 10: Severe multicollinearity
 \end{itemize}
 
@@ -263,8 +270,8 @@ VIF analysis of key numerical features:
 
 Findings from VIF Analysis:
 \begin{itemize}
-    \item High multicollinearity among square footage variables
-    \item Moderate correlation between garage-related features
+    \item There exists potentialmulticollinearity among square footage variables
+    \item Acceptable correlation between garage-related features
     \item Quality and age features show acceptable VIF values
     \item Suggests need for feature selection or dimensionality reduction
 \end{itemize}
@@ -460,6 +467,11 @@ Lasso regression reveals:
     \item Identification of most crucial price determinants
     \item Sparse feature representation for improved interpretability
     \item Consistency with Ridge regression in key feature identification
+\end{itemize}
+
+\section{Random Forest Regression}
+\begin{itemize}
+    \item[3.4.1] Model Performance
 \end{itemize}
 
 \section{Neural Network Regression}
