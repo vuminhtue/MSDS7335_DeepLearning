@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+
+\title{Summary of Ames Housing Analysis Project}
+\author{MSDS 7335 - Machine Learning II}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Challenges and Solutions}
+
+The most significant challenge I encountered was with the neural network implementation, which initially performed extremely poorly with a negative R² value (-3.61) and high RMSE (187,990). This underperformance compared to traditional models highlighted the difficulty of applying deep learning to tabular data with limited samples. I addressed this by implementing several key optimizations: adding batch normalization layers to reduce internal covariate shift, normalizing the target variable to stabilize training, implementing an adaptive learning rate scheduler, and redesigning the architecture with appropriate regularization. These modifications dramatically improved performance, bringing the neural network's R² to 0.8849, making it competitive with the other models.
+
+Another challenge was ensuring proper preprocessing across different model types. Each model had different sensitivities to missing values, feature scaling, and categorical encoding. I developed a robust preprocessing pipeline using scikit-learn's ColumnTransformer to apply appropriate transformations to numerical and categorical features, ensuring consistency across all models while respecting their unique requirements.
+
+\section*{Learning Moments}
+
+This project significantly deepened my understanding of regularization techniques in machine learning. Working with both Ridge (L2) and Lasso (L1) regression allowed me to observe how different penalty approaches affect model coefficients and feature selection. The clear visualization of lambda's impact on model performance through cross-validation created an intuitive understanding of the bias-variance tradeoff that theoretical discussions hadn't fully conveyed.
+
+I also gained valuable experience in neural network optimization for structured data. Prior to this project, my neural network experience was primarily with image and text data. Learning to properly normalize features and targets, implement batch normalization, and use learning rate scheduling specifically for tabular data expanded my deep learning toolkit considerably.
+
+\section*{Key Accomplishment}
+
+My proudest achievement was developing a comprehensive modeling approach that effectively balanced performance, interpretability, and implementation complexity. The final analysis demonstrated that:
+
+\begin{enumerate}
+    \item Lasso Regression achieved the best overall performance (R²: 0.8960) while providing valuable feature selection
+    \item Random Forest captured important non-linear relationships (R²: 0.8901)
+    \item The optimized Neural Network performed competitively (R²: 0.8849) after addressing initial challenges
+    \item Ridge Regression provided a solid baseline (R²: 0.8755) with stable coefficients
+\end{enumerate}
+
+This comparative framework provides not just performance metrics but actionable insights for model selection based on specific application requirements. The small performance differences between models ($\sim$1.1\% variation in R²) with their distinct characteristics offers a nuanced perspective on model selection that goes beyond simply choosing the ``best'' performer.
+
+\end{document} 
