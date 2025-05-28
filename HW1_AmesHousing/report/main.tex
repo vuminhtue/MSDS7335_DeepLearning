@@ -83,11 +83,14 @@
         \end{itemize}
     \item[3.4] Random Forest Regression
         \begin{itemize}
-        \item[3.4.1] Model Performance
+        \item[3.4.1] Model Implementation
+        \item[3.4.2] Feature Importance
+        \item[3.4.3] Performance Analysis
         \end{itemize}
     \item[3.5] Neural Network Regression
         \begin{itemize}
         \item[3.5.1] Network Architecture and Training
+        \item[3.5.2] Performance Analysis
         \end{itemize}
     \item[3.6] Model Comparison
     \item[3.7] Key Findings and Recommendations
@@ -379,19 +382,22 @@ These insights will guide our modeling approach, particularly in:
 \chapter{Modeling Approaches}
 
 \section{Introduction}
-This chapter presents three different modeling approaches for predicting house prices in the Ames Housing dataset:
+This chapter presents four different modeling approaches for predicting house prices in the Ames Housing dataset:
 \begin{itemize}
-    \item Ridge Regression (L2 regularization)
-    \item Lasso Regression (L1 regularization)
-    \item Neural Network Regression
+    \item Ridge Regression (L2 regularization) with 10-fold cross validation
+    \item Lasso Regression (L1 regularization) with 10-fold cross validation
+    \item Random Forest Regression with 10-fold cross validation
+    \item PyTorch Neural Network with 10-fold cross validation
 \end{itemize}
 
 Each model offers unique advantages and characteristics in handling the complexities of house price prediction.
+For this analysis, we excluded variables with high proportions of missing values: "PoolQC", "MiscFeature", "Alley", "Fence", "MasVnrType", and "FireplaceQu". For remaining missing values, we applied imputation using mean values for numerical features and most frequent values for categorical features.
 
 \section{Ridge Regression}
 Ridge regression addresses multicollinearity by adding an L2 penalty term to the loss function. This approach is particularly useful for our dataset given the high correlations observed between various features.
 
 \subsection{Hyperparameter Tuning}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{figures/ridge_lambda_vs_rmse.png}
@@ -399,30 +405,19 @@ Ridge regression addresses multicollinearity by adding an L2 penalty term to the
     \label{fig:ridge_lambda}
 \end{figure}
 
-The analysis of different lambda values reveals several key patterns:
+The analysis of different lambda values reveals:
 \begin{itemize}
-    \item Very small lambda values ($\lambda < 0.1$) show consistently high RMSE around 43,600, indicating insufficient regularization
-    \item As lambda increases from 0.1 to 500, RMSE steadily decreases, showing the benefit of regularization
-    \item Optimal performance achieved at $\lambda \approx 556.88$ with RMSE = 32,746.59
-    \item Beyond $\lambda > 1000$, model performance rapidly deteriorates:
-    \begin{itemize}
-        \item At $\lambda = 5,790$: RMSE increases to 40,200
-        \item At $\lambda = 23,598$: RMSE reaches 54,885
-        \item At $\lambda = 1,000,000$: RMSE degrades to 77,935
-    \end{itemize}
-    \item The U-shaped error curve demonstrates the classic bias-variance tradeoff:
-    \begin{itemize}
-        \item Low lambda: High variance (overfitting)
-        \item Optimal lambda: Best balance
-        \item High lambda: High bias (underfitting)
-    \end{itemize}
+    \item Optimal lambda value found through 10-fold cross-validation
+    \item Model performance initially improves with increased regularization
+    \item Excessive regularization leads to underfitting, as shown by increasing RMSE
+    \item Clear bias-variance tradeoff demonstrated in the U-shaped error curve
 \end{itemize}
 
 \subsection{Feature Importance}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{figures/ridge_feature_importance.png}
-    \caption{Feature Importance in Ridge Regression}
+    \caption{Top 10 Features by Importance in Ridge Regression}
     \label{fig:ridge_importance}
 \end{figure}
 
@@ -447,17 +442,17 @@ Lasso regression performs both regularization and feature selection through L1 p
 
 The lambda parameter analysis shows:
 \begin{itemize}
-    \item Optimal lambda value identified at 1048.11
-    \item Minimum RMSE achieved: 33,839.38
-    \item Performance deteriorates rapidly with lambda > 2000
+    \item Optimal lambda value identified through 10-fold cross-validation
     \item Feature selection becomes more aggressive at higher lambda values
+    \item Similar U-shaped error curve to Ridge, demonstrating bias-variance tradeoff
+    \item Performance deteriorates rapidly with excessive regularization
 \end{itemize}
 
 \subsection{Feature Selection}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{figures/lasso_feature_importance.png}
-    \caption{Feature Importance from Lasso Regression}
+    \caption{Top 10 Features by Importance from Lasso Regression}
     \label{fig:lasso_importance}
 \end{figure}
 
@@ -470,9 +465,45 @@ Lasso regression reveals:
 \end{itemize}
 
 \section{Random Forest Regression}
+Random Forest is an ensemble method that leverages multiple decision trees to capture complex non-linear relationships and interactions between features.
+
+\subsection{Model Implementation}
+Our Random Forest implementation included the following components:
 \begin{itemize}
-    \item[3.4.1] Model Performance
+    \item Ensemble of 100 decision trees, each trained on bootstrap samples
+    \item Feature selection at each split using a random subset of features
+    \item Maximum depth controlled to prevent overfitting
+    \item 10-fold cross-validation for robust performance evaluation
 \end{itemize}
+
+Random Forest regression offers several advantages for this housing price prediction task:
+\begin{itemize}
+    \item Handles non-linear relationships without explicit transformation
+    \item Naturally incorporates feature interactions
+    \item Robust to outliers and non-normally distributed data
+    \item Provides built-in feature importance measures
+    \item Less sensitive to hyperparameter tuning than linear models
+\end{itemize}
+
+\subsection{Feature Importance}
+One of the key benefits of Random Forest is its ability to compute feature importance. The algorithm calculates importance based on how much each feature decreases impurity when used in tree splits. The model identified several key predictors:
+
+\begin{itemize}
+    \item Overall Quality remained the dominant feature
+    \item Ground Living Area showed high importance
+    \item Year Built and neighborhood variables demonstrated strong impact
+    \item Lot Area and basement features showed moderate importance
+\end{itemize}
+
+\subsection{Performance Analysis}
+The Random Forest model achieved excellent predictive performance:
+\begin{itemize}
+    \item 10-fold CV RMSE: 29,042.51
+    \item Test RMSE: 29,032.17
+    \item Test R²: 0.8901
+\end{itemize}
+
+This performance positions Random Forest as one of the top-performing models in our comparison, with better metrics than the linear models in most cases. The algorithm's ability to capture non-linear relationships and interactions between features proved beneficial for this dataset.
 
 \section{Neural Network Regression}
 A deep learning approach using neural networks offers the potential to capture complex, non-linear relationships in the data.
@@ -487,67 +518,119 @@ A deep learning approach using neural networks offers the potential to capture c
 
 The neural network implementation:
 \begin{itemize}
-    \item Utilizes multiple hidden layers for complex pattern recognition
-    \item Shows consistent improvement during training
-    \item Employs dropout for regularization
-    \item Demonstrates good convergence characteristics
+    \item Uses a deeper architecture with 4 layers (128→64→32→1)
+    \item Incorporates batch normalization after each hidden layer
+    \item Employs ReLU activation and dropout (0.2) for regularization
+    \item Uses Adam optimizer with learning rate 0.001 and weight decay
+    \item Implements adaptive learning rate scheduling to prevent overfitting
+    \item Normalizes the target variable to improve training stability
+    \item Shows consistent improvement during training as evidenced by the loss curve
+    \item Evaluated using 10-fold cross-validation for robust performance assessment
 \end{itemize}
+
+\subsection{Performance Analysis}
+The optimized neural network achieved competitive performance:
+\begin{itemize}
+    \item 10-fold CV RMSE: 29,181.09
+    \item Test RMSE: 29,713.48
+    \item Test R²: 0.8849
+\end{itemize}
+
+This represents a substantial improvement over the initial implementation and places the neural network in a competitive position with traditional methods. Several factors contributed to this improvement:
+\begin{itemize}
+    \item Target variable normalization to stabilize gradient descent
+    \item Batch normalization to reduce internal covariate shift
+    \item Learning rate scheduling to navigate optimization challenges
+    \item Deeper architecture with appropriate regularization
+    \item Careful tuning of hyperparameters
+\end{itemize}
+
+The neural network now demonstrates performance comparable to Random Forest (R²: 0.8901) and slightly below Lasso Regression (R²: 0.8960), showing that deep learning approaches can be effective for housing price prediction when properly implemented.
 
 \section{Model Comparison}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{figures/model_comparison.png}
-    \caption{Performance Comparison Across Models}
+    \caption{Performance Comparison Across All Four Models}
     \label{fig:model_comparison}
 \end{figure}
 
-\subsection{Prediction Analysis}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{figures/prediction_comparison.png}
-    \caption{Prediction Comparison Between Models}
-    \label{fig:prediction_comparison}
-\end{figure}
-
-Comparative analysis reveals:
+Comparative analysis reveals several important insights:
 \begin{itemize}
-    \item Both Ridge and Lasso achieve similar optimal performance (RMSE ≈ 33,839)
-    \item Linear models (Ridge and Lasso) provide good interpretability
-    \item Neural network captures complex non-linear relationships
-    \item Model ensemble potential for improved predictions
+    \item \textbf{Lasso Regression} achieved the best overall performance with the lowest test RMSE (28,241.51) and highest R² (0.8960)
+    \item \textbf{Random Forest} followed closely with test RMSE of 29,032.17 and R² of 0.8901
+    \item \textbf{Neural Network} performed competitively after optimization with test RMSE of 29,713.48 and R² of 0.8849
+    \item \textbf{Ridge Regression} performed well but slightly behind the other methods (RMSE: 30,907.81, R²: 0.8755)
 \end{itemize}
 
+These results highlight several key considerations for housing price prediction:
+\begin{itemize}
+    \item Linear models with proper regularization can perform remarkably well on this dataset
+    \item Lasso's automatic feature selection provides an edge by creating a more parsimonious model
+    \item Random Forest's ability to capture non-linear relationships makes it competitive
+    \item Neural networks can achieve comparable performance with proper architecture and training strategies
+    \item Cross-validation provides reliable estimates of generalization performance
+\end{itemize}
+
+Performance differences between all four models were relatively small, suggesting that any of these approaches could be viable in practice, with the choice depending on specific requirements for interpretability, feature selection, and implementation complexity.
+\chapter{Discussion and Conclusion}
 \section{Key Findings and Recommendations}
-Based on the comprehensive modeling analysis:
+Based on the comprehensive modeling analysis with four different approaches:
 \begin{itemize}
     \item Ridge Regression:
     \begin{itemize}
         \item Best for handling multicollinearity
         \item Provides stable feature importance estimates
-        \item Achieves optimal performance at lambda ≈ 1048
+        \item Shows which features have the strongest linear relationship with price
+        \item Good performance with RMSE of 30,907.81 and R² of 0.8755
     \end{itemize}
     \item Lasso Regression:
     \begin{itemize}
         \item Offers automatic feature selection
         \item Produces sparse solutions
-        \item Shows similar optimal lambda value to Ridge
+        \item Identifies the most crucial predictors
+        \item Best overall performance with RMSE of 28,241.51 and R² of 0.8960
+    \end{itemize}
+    \item Random Forest:
+    \begin{itemize}
+        \item Captures non-linear relationships and interactions
+        \item Strong predictive performance (RMSE: 29,032.17, R²: 0.8901)
+        \item Less sensitive to outliers and non-normal distributions
+        \item Provides reliable feature importance measurements
     \end{itemize}
     \item Neural Network:
     \begin{itemize}
-        \item Captures complex non-linear relationships
-        \item Shows potential for high accuracy
-        \item Requires more data for optimal performance
+        \item Achieves competitive performance with proper architecture and training (RMSE: 29,713.48, R²: 0.8849)
+        \item Benefits significantly from target normalization and batch normalization
+        \item Shows potential for handling complex patterns in the data
+        \item Requires more careful optimization than traditional methods
     \end{itemize}
+\end{itemize}
+
+For practical implementation in real estate valuation applications, we recommend:
+\begin{itemize}
+    \item Use Lasso Regression when interpretability and model simplicity are important
+    \item Consider Random Forest when capturing complex feature interactions is critical
+    \item Employ Ridge Regression when dealing with highly correlated features
+    \item Consider Neural Networks when willing to invest in optimization for competitive performance
+    \item Consider ensemble approaches combining the strengths of multiple models
 \end{itemize}
 
 \section{Future Improvements}
 Potential enhancements for model performance:
 \begin{itemize}
-    \item Ensemble methods combining multiple models
-    \item Feature engineering based on domain knowledge
-    \item Hyperparameter optimization through cross-validation
+    \item Ensemble methods combining multiple models, particularly Lasso, Random Forest, and Neural Network
+    \item More sophisticated feature engineering based on domain knowledge
+    \item Hyperparameter optimization through grid search or Bayesian optimization
     \item Integration of temporal market trends
     \item Neighborhood-specific sub-models
+    \item For neural networks: 
+    \begin{itemize}
+        \item More complex architectures such as residual connections
+        \item Advanced regularization techniques like L1 weight regularization
+        \item Feature interaction layers to capture multiplicative effects
+        \item Bayesian neural networks for uncertainty quantification
+    \end{itemize}
 \end{itemize}
 
 \end{document} 

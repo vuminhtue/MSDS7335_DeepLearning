@@ -28,9 +28,13 @@
 \contentsline {subsection}{\numberline {3.3.1}Parameter Optimization}{20}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Feature Selection}{21}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}Random Forest Regression}{21}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Neural Network Regression}{21}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Network Architecture and Training}{22}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}Model Comparison}{23}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Prediction Analysis}{23}{subsection.3.6.1}%
-\contentsline {section}{\numberline {3.7}Key Findings and Recommendations}{24}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Future Improvements}{24}{section.3.8}%
+\contentsline {subsection}{\numberline {3.4.1}Model Implementation}{21}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Feature Importance}{22}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Performance Analysis}{22}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Neural Network Regression}{22}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Network Architecture and Training}{23}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Performance Analysis}{24}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Model Comparison}{25}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Discussion and Conclusion}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Key Findings and Recommendations}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Future Improvements}{28}{section.4.2}%

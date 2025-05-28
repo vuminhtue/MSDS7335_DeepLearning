@@ -235,22 +235,28 @@ def random_forest(X_train, y_train, X_test, y_test):
 class HousingNN(nn.Module):
     def __init__(self, input_dim):
         super(HousingNN, self).__init__()
-        self.layer1 = nn.Linear(input_dim, 64)
-        self.layer2 = nn.Linear(64, 32)
-        self.layer3 = nn.Linear(32, 1)
+        # Improved architecture with batch normalization
+        self.layer1 = nn.Linear(input_dim, 128)
+        self.bn1 = nn.BatchNorm1d(128)
+        self.layer2 = nn.Linear(128, 64)
+        self.bn2 = nn.BatchNorm1d(64)
+        self.layer3 = nn.Linear(64, 32)
+        self.bn3 = nn.BatchNorm1d(32)
+        self.layer4 = nn.Linear(32, 1)
         self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(0.3)
+        self.dropout = nn.Dropout(0.2)
         
     def forward(self, x):
-        x = self.relu(self.layer1(x))
+        x = self.relu(self.bn1(self.layer1(x)))
         x = self.dropout(x)
-        x = self.relu(self.layer2(x))
+        x = self.relu(self.bn2(self.layer2(x)))
         x = self.dropout(x)
-        x = self.layer3(x)
+        x = self.relu(self.bn3(self.layer3(x)))
+        x = self.layer4(x)
         return x
 
 # Function to train the neural network
-def train_nn(X_train, y_train, input_dim, epochs=100, batch_size=32, learning_rate=0.0001):
+def train_nn(X_train, y_train, input_dim, epochs=100, batch_size=32, learning_rate=0.001):
     # Convert to PyTorch tensors
     # Handle sparse matrix
     if sparse.issparse(X_train):
@@ -269,7 +275,10 @@ def train_nn(X_train, y_train, input_dim, epochs=100, batch_size=32, learning_ra
     
     # Loss function and optimizer
     criterion = nn.MSELoss()
-    optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=0.0001)
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=0.0005)
+    
+    # Learning rate scheduler
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=5, verbose=True)
     
     # To track training progress
     epoch_losses = []
@@ -294,6 +303,9 @@ def train_nn(X_train, y_train, input_dim, epochs=100, batch_size=32, learning_ra
             
         epoch_loss = running_loss/len(train_loader)
         epoch_losses.append(epoch_loss)
+        
+        # Step the scheduler
+        scheduler.step(epoch_loss)
         
         if (epoch + 1) % 20 == 0:
             print(f'Epoch {epoch+1}, Loss: {epoch_loss:.4f}')
@@ -348,11 +360,30 @@ def pytorch_neural_network(X_train_processed, y_train, X_test_processed, y_test)
         X_fold_train, X_fold_val = X_train_processed[train_idx], X_train_processed[val_idx]
         y_fold_train, y_fold_val = y_train.iloc[train_idx], y_train.iloc[val_idx]
         
-        # Train model (using fewer epochs for CV)
-        model, _ = train_nn(X_fold_train, y_fold_train, input_dim, epochs=50, batch_size=32, learning_rate=0.0001)
+        # Scale the target variable for better training
+        y_mean = y_fold_train.mean()
+        y_std = y_fold_train.std()
+        y_fold_train_scaled = (y_fold_train - y_mean) / y_std
+        y_fold_val_scaled = (y_fold_val - y_mean) / y_std
         
-        # Evaluate model
-        fold_rmse, _ = evaluate_nn(model, X_fold_val, y_fold_val)
+        # Train model (using fewer epochs for CV)
+        model, _ = train_nn(X_fold_train, y_fold_train_scaled, input_dim, epochs=50, batch_size=32, learning_rate=0.001)
+        
+        # Evaluate model on scaled data then transform back
+        model.eval()
+        with torch.no_grad():
+            if sparse.issparse(X_fold_val):
+                X_val_tensor = torch.FloatTensor(X_fold_val.toarray())
+            else:
+                X_val_tensor = torch.FloatTensor(X_fold_val)
+                
+            # Get predictions
+            y_pred_scaled = model(X_val_tensor).numpy().flatten()
+            # Transform predictions back to original scale
+            y_pred = y_pred_scaled * y_std + y_mean
+            
+            # Calculate RMSE
+            fold_rmse = np.sqrt(mean_squared_error(y_fold_val, y_pred))
         
         nn_rmse_scores.append(fold_rmse)
         print(f"Fold {i+1} RMSE: {fold_rmse:.2f}")
@@ -360,11 +391,31 @@ def pytorch_neural_network(X_train_processed, y_train, X_test_processed, y_test)
     cv_rmse = np.mean(nn_rmse_scores)
     print(f"Neural Network CV RMSE: {cv_rmse:.2f}")
     
+    # Scale the target variable for full training
+    y_train_mean = y_train.mean()
+    y_train_std = y_train.std()
+    y_train_scaled = (y_train - y_train_mean) / y_train_std
+    
     # Train final model on full training set
-    final_model, _ = train_nn(X_train_processed, y_train, input_dim, epochs=100, batch_size=32, learning_rate=0.0001)
+    final_model, _ = train_nn(X_train_processed, y_train_scaled, input_dim, epochs=150, batch_size=64, learning_rate=0.001)
     
     # Evaluate on test set
-    test_rmse, test_r2 = evaluate_nn(final_model, X_test_processed, y_test)
+    final_model.eval()
+    with torch.no_grad():
+        if sparse.issparse(X_test_processed):
+            X_test_tensor = torch.FloatTensor(X_test_processed.toarray())
+        else:
+            X_test_tensor = torch.FloatTensor(X_test_processed)
+            
+        # Get predictions
+        y_pred_scaled = final_model(X_test_tensor).numpy().flatten()
+        # Transform predictions back to original scale
+        y_pred = y_pred_scaled * y_train_std + y_train_mean
+        
+        # Calculate metrics
+        test_rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+        test_r2 = r2_score(y_test, y_pred)
+    
     print(f"Neural Network Test RMSE: {test_rmse:.2f}")
     print(f"Neural Network Test R²: {test_r2:.4f}")
     
