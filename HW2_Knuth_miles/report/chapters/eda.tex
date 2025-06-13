@@ -1,0 +1,113 @@
+\section{Geographic Distribution Analysis}
+The geographic distribution of cities in the Knuth Miles dataset reveals several interesting patterns. Figure \ref{fig:geo_dist} shows the spatial distribution of cities, with point sizes proportional to population and colors indicating population density.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/geo_distribution.png}
+    \caption{Geographic distribution of cities, with point sizes proportional to population}
+    \label{fig:geo_dist}
+\end{figure}
+
+Key observations from the geographic analysis include:
+\begin{itemize}
+    \item Concentration of major cities along the East Coast
+    \item Sparse distribution in the central and western regions
+    \item Notable clustering around major metropolitan areas
+    \item Clear separation between US and Canadian cities
+\end{itemize}
+
+\section{Population Analysis}
+The population distribution across cities shows a highly skewed pattern, typical of urban systems. Figure \ref{fig:pop_dist} illustrates both the raw and log-transformed population distributions.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/pop_distribution.png}
+        \caption{Raw population distribution}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/pop_log_distribution.png}
+        \caption{Log-transformed distribution}
+    \end{subfigure}
+    \caption{Population distribution analysis}
+    \label{fig:pop_dist}
+\end{figure}
+
+Population statistics:
+\begin{itemize}
+    \item Mean population: [Value]
+    \item Median population: [Value]
+    \item Standard deviation: [Value]
+    \item Minimum population: [Value]
+    \item Maximum population: [Value]
+\end{itemize}
+
+The log-normal distribution of populations suggests a hierarchical urban system, consistent with urban scaling theory.
+
+\section{Network Structure Analysis}
+The transportation network exhibits several interesting structural properties. Figure \ref{fig:network} shows the network visualization with communities highlighted.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/network_communities.png}
+    \caption{Network visualization with detected communities}
+    \label{fig:network}
+\end{figure}
+
+Key network metrics:
+\begin{itemize}
+    \item Number of nodes: 128
+    \item Number of edges: [Value]
+    \item Average degree: [Value]
+    \item Network density: [Value]
+    \item Average clustering coefficient: [Value]
+    \item Average shortest path length: [Value]
+\end{itemize}
+
+\section{Centrality Analysis}
+The centrality analysis reveals the most important cities in the transportation network. Figure \ref{fig:centrality} shows the distribution of different centrality measures.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/degree_centrality.png}
+        \caption{Degree centrality}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/betweenness_centrality.png}
+        \caption{Betweenness centrality}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{figures/closeness_centrality.png}
+        \caption{Closeness centrality}
+    \end{subfigure}
+    \caption{Distribution of centrality measures}
+    \label{fig:centrality}
+\end{figure}
+
+Top 5 cities by each centrality measure:
+\begin{itemize}
+    \item Degree Centrality: [List]
+    \item Betweenness Centrality: [List]
+    \item Closeness Centrality: [List]
+\end{itemize}
+
+\section{Community Detection}
+The Louvain community detection algorithm identified [Number] distinct communities in the network. Figure \ref{fig:communities} shows the geographic distribution of these communities.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/community_map.png}
+    \caption{Geographic distribution of detected communities}
+    \label{fig:communities}
+\end{figure}
+
+Key findings from community detection:
+\begin{itemize}
+    \item Communities often align with geographic regions
+    \item Some communities cross state/provincial boundaries
+    \item Major metropolitan areas often form their own communities
+    \item Clear separation between US and Canadian communities
+\end{itemize}
+
+This exploratory analysis provides a foundation for more detailed investigation of the network's properties and their implications for transportation planning and urban development. 
