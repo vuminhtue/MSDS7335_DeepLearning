@@ -1,9 +1,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Geographic distribution of cities, with point sizes proportional to population}}{7}{figure.caption.7}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Population distribution analysis}}{8}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Network visualization with detected communities}}{9}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Distribution of centrality measures}}{10}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Geographic distribution of detected communities}}{11}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Geographic distribution of cities, with node size and color indicating population. Cities within 300 miles are connected.}}{7}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Distribution of city populations, showing the right-skewed nature of the data.}}{8}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Top 10 longest city-to-city distances in the network.}}{9}{figure.2.3}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Top 10 shortest city-to-city distances in the network.}}{10}{figure.2.4}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Distribution of betweenness centrality scores across all cities.}}{12}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Top 10 cities by betweenness centrality.}}{13}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Distribution of closeness centrality scores across all cities.}}{14}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Top 10 cities by closeness centrality.}}{15}{figure.3.4}%
 \addvspace {10\p@ }

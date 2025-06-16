@@ -1,0 +1,145 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{geometry}
+\usepackage{float}
+
+\geometry{margin=1in}
+
+\title{Network Analysis of the Knuth Miles Dataset}
+\author{MSDS 7335 Deep Learning}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report presents a comprehensive network analysis of the Knuth Miles dataset, which represents distances between 128 North American cities. We employ graph theory methodologies to analyze the network structure, including degree distribution, centrality measures, and geographical patterns. The findings reveal significant insights into the connectivity patterns of North American cities and demonstrate the utility of network analysis in understanding spatial relationships.
+\end{abstract}
+
+\section{Introduction}
+
+The Knuth Miles dataset, compiled by Donald E. Knuth, provides distance information between 128 North American cities. This dataset serves as an excellent foundation for network analysis, allowing us to examine the topological properties of city connectivity. In this analysis, we construct a weighted undirected graph where nodes represent cities and edges represent the distances between them.
+
+\section{Methodology}
+
+\subsection{Data Preparation}
+
+The analysis begins with loading the dataset from the compressed file \texttt{knuth\_miles.txt.gz}. We construct a network using NetworkX, where:
+\begin{itemize}
+    \item Nodes represent cities with attributes for position (latitude/longitude) and population
+    \item Edges represent distances between cities in miles
+    \item The resulting graph contains 128 nodes and 8128 edges
+\end{itemize}
+
+\subsection{Analytical Techniques}
+
+We employ several analytical techniques:
+
+\begin{itemize}
+    \item \textbf{Geographic Distribution Analysis}: Visualization of city locations and connections using cartopy
+    \item \textbf{Population Analysis}: Statistical analysis of city populations
+    \item \textbf{Centrality Analysis}: Application of degree, betweenness, and closeness centrality measures
+    \item \textbf{Distance Analysis}: Examination of shortest and longest city-to-city distances
+\end{itemize}
+
+\section{Results}
+
+\subsection{Geographic Distribution}
+
+The geographic distribution analysis reveals the spatial arrangement of cities across North America. Cities are connected if they are within 300 miles of each other, creating a network that reflects natural geographical clustering. The visualization shows:
+
+\begin{itemize}
+    \item Dense clusters in the Northeast and Midwest regions
+    \item Sparse connections in the Western and Southern regions
+    \item Population distribution indicated by node size
+\end{itemize}
+
+\subsection{Population Analysis}
+
+The population analysis reveals the following statistics:
+\begin{itemize}
+    \item Mean population: 120,000
+    \item Median population: 68,000
+    \item Standard deviation: 167,000
+    \item Range: 3,000 to 876,000
+\end{itemize}
+
+This indicates a right-skewed distribution with a few large cities and many smaller ones.
+
+\subsection{Centrality Analysis}
+
+The centrality analysis reveals different aspects of city importance in the network:
+
+\subsubsection{Degree Centrality}
+All cities have the same degree centrality (1.0000) due to the complete graph structure, where every city is connected to every other city.
+
+\subsubsection{Betweenness Centrality}
+Top 5 cities by betweenness centrality:
+\begin{itemize}
+    \item Rock Springs, WY (0.0478)
+    \item Saint Paul, MN (0.0403)
+    \item Salt Lake City, UT (0.0394)
+    \item Richmond, IN (0.0335)
+    \item Terre Haute, IN (0.0332)
+\end{itemize}
+
+\subsubsection{Closeness Centrality}
+Top 5 cities by closeness centrality:
+\begin{itemize}
+    \item Springfield, IL (0.0010)
+    \item Saint Louis, MO (0.0010)
+    \item Terre Haute, IN (0.0010)
+    \item Vincennes, IN (0.0010)
+    \item Rockford, IL (0.0010)
+\end{itemize}
+
+\subsection{Distance Analysis}
+
+The distance analysis reveals interesting patterns in city connectivity:
+
+\subsubsection{Longest Distances}
+The analysis of longest city-to-city distances shows the geographical extent of the network, with the top distances representing cross-continental connections.
+
+\subsubsection{Shortest Distances}
+The shortest distances typically occur between cities in the same metropolitan area or region, reflecting natural geographical clustering.
+
+\section{Discussion}
+
+The analysis reveals several key insights:
+
+\begin{itemize}
+    \item The network's complete graph structure (all cities connected to all others) provides a comprehensive view of inter-city distances
+    \item Centrality measures reveal different aspects of city importance:
+    \begin{itemize}
+        \item Betweenness centrality highlights cities that serve as important transit points
+        \item Closeness centrality identifies cities that are most accessible to others
+    \end{itemize}
+    \item The population distribution shows a right-skewed pattern typical of urban systems
+    \item Geographic clustering is evident in the distance patterns
+\end{itemize}
+
+\section{Conclusion}
+
+This network analysis of the Knuth Miles dataset demonstrates the utility of graph theory in understanding spatial relationships between cities. The findings reveal:
+
+\begin{itemize}
+    \item The importance of central cities in the network structure
+    \item Natural geographical clustering of cities
+    \item The relationship between population size and network position
+    \item The role of distance in shaping city connectivity
+\end{itemize}
+
+These insights could inform transportation planning, logistics optimization, and regional development strategies.
+
+\bibliographystyle{plainnat}
+\begin{thebibliography}{9}
+\bibitem{knuth} Knuth, D. E. (1993). The Stanford GraphBase: A Platform for Combinatorial Computing. ACM Press.
+\bibitem{newman} Newman, M. E. J. (2010). Networks: An Introduction. Oxford University Press.
+\end{thebibliography}
+
+\end{document} 

@@ -1,23 +1,50 @@
-\contentsline {chapter}{\numberline {1}Introduction and Methodology}{4}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Dataset Overview}{4}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Graph Theory Methodology}{4}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Network Representation}{4}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Key Network Metrics}{4}{subsection.1.2.2}%
-\contentsline {subsubsection}{Centrality Measures}{5}{section*.4}%
-\contentsline {subsubsection}{Community Detection}{5}{section*.5}%
-\contentsline {subsubsection}{Network Properties}{5}{section*.6}%
-\contentsline {section}{\numberline {1.3}Analysis Tools and Techniques}{5}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Research Questions}{5}{section.1.4}%
-\contentsline {chapter}{\numberline {2}Exploratory Data Analysis}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Geographic Distribution Analysis}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Population Analysis}{8}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Network Structure Analysis}{9}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Centrality Analysis}{9}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Community Detection}{10}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Advanced Network Analysis}{12}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Discussion and Conclusions}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Summary of Key Findings}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Theoretical Implications}{13}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Practical Applications}{13}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Limitations and Future Work}{14}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Concluding Remarks}{14}{section.4.5}%
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Dataset Overview}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Project Objectives}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Report Structure}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Methodological Framework}{5}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Exploratory Data Analysis}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Data Structure and Overview}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Data Export Process}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Node Data Export}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Edge Data Export}{6}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Data Quality Analysis}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Geographic Distribution Analysis}{7}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}City Clustering}{7}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Geographic Visualization}{7}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Population Analysis}{8}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Population Distribution Visualization}{8}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.6}Distance Analysis}{9}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Longest Distances}{9}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Shortest Distances}{9}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Network Properties}{10}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Visualization}{10}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Centrality Analysis}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction to Centrality Measures}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Degree Centrality}{11}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Definition and Calculation}{11}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Betweenness Centrality}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Definition and Calculation}{11}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Top Cities by Betweenness Centrality}{11}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Interpretation}{13}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Closeness Centrality}{13}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Definition and Calculation}{13}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Top Cities by Closeness Centrality}{13}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Interpretation}{15}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Implications}{15}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Discussions and Results}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Synthesis of Findings}{17}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Network Structure}{17}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Geographical Patterns}{17}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Key Contributions}{17}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Methodological Contributions}{17}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Empirical Contributions}{17}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Implications for Urban Planning}{18}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Transportation Infrastructure}{18}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Regional Development}{18}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Limitations and Future Work}{18}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Current Limitations}{18}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Future Research Directions}{18}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Conclusion}{18}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Recommendations}{19}{section.4.6}%

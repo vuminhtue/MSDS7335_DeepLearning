@@ -1,65 +1,51 @@
+\chapter{Introduction}
+
+\section{Background}
+The Knuth Miles dataset, compiled by Donald E. Knuth in his seminal work "The Stanford GraphBase: A Platform for Combinatorial Computing" (1993), represents a comprehensive collection of distance measurements between 128 major North American cities. This dataset serves as a fundamental resource for studying spatial relationships and network structures in urban geography.
+
 \section{Dataset Overview}
-The Knuth Miles dataset represents a historical transportation network from 1949, containing information about 128 major cities in the United States and Canada. The dataset includes:
+The dataset contains:
 \begin{itemize}
-    \item City names and locations (latitude and longitude)
-    \item Population data for each city
-    \item A symmetric distance matrix representing the highway distances between cities
+    \item 128 nodes representing major North American cities
+    \item Complete pairwise distance measurements between all cities
+    \item Additional attributes for each city including:
+    \begin{itemize}
+        \item Geographic coordinates (latitude/longitude)
+        \item Population data
+    \end{itemize}
 \end{itemize}
 
-This dataset was originally part of the Stanford GraphBase and has been widely used in graph theory and network analysis studies. The data provides a snapshot of the transportation infrastructure during a significant period in North American development, just after World War II and during the early stages of the interstate highway system.
-
-\section{Graph Theory Methodology}
-The analysis of the Knuth Miles dataset employs several key concepts from graph theory and network analysis:
-
-\subsection{Network Representation}
-The transportation network is represented as an undirected, weighted graph $G = (V, E, w)$ where:
-\begin{itemize}
-    \item $V$ is the set of vertices (cities)
-    \item $E$ is the set of edges (highway connections)
-    \item $w$ is the weight function assigning distances to edges
-\end{itemize}
-
-\subsection{Key Network Metrics}
-The analysis focuses on several important network metrics:
-
-\subsubsection{Centrality Measures}
-\begin{itemize}
-    \item \textbf{Degree Centrality}: Measures the number of direct connections to a city
-    \item \textbf{Betweenness Centrality}: Quantifies how often a city appears on shortest paths between other cities
-    \item \textbf{Closeness Centrality}: Indicates how close a city is to all other cities in the network
-\end{itemize}
-
-\subsubsection{Community Detection}
-The Louvain method is employed to identify natural communities in the network, which helps understand regional clustering and transportation patterns.
-
-\subsubsection{Network Properties}
-Key properties analyzed include:
-\begin{itemize}
-    \item Network density
-    \item Average clustering coefficient
-    \item Average shortest path length
-    \item Degree distribution
-\end{itemize}
-
-\section{Analysis Tools and Techniques}
-The analysis is conducted using Python with the following key libraries:
-\begin{itemize}
-    \item NetworkX for graph analysis and visualization
-    \item NumPy for numerical computations
-    \item Matplotlib and Seaborn for data visualization
-    \item SciPy for statistical analysis
-    \item scikit-learn for additional analytical techniques
-\end{itemize}
-
-\section{Research Questions}
-The analysis addresses several key questions:
+\section{Project Objectives}
+The primary objectives of this analysis are:
 \begin{enumerate}
-    \item What is the geographic distribution of cities and how does it relate to population?
-    \item How are populations distributed across the network?
-    \item What are the structural properties of the transportation network?
-    \item Which cities are most central in the network and why?
-    \item Are there natural clusters or communities in the network?
-    \item How efficient is the highway system in terms of connectivity?
+    \item To construct and analyze a weighted undirected graph representation of the Knuth Miles dataset
+    \item To examine the network properties and topological characteristics of the city connectivity
+    \item To identify key cities based on various centrality measures
+    \item To understand the geographical patterns and clustering in the network
+    \item To derive insights about urban connectivity and spatial relationships
 \end{enumerate}
 
-These questions guide the analysis and help uncover insights about the historical transportation network and its implications for urban development and connectivity. 
+\section{Report Structure}
+This report is organized into four main chapters:
+
+\begin{enumerate}
+    \item \textbf{Introduction} (Current Chapter): Provides background information about the dataset and project objectives.
+    
+    \item \textbf{Exploratory Data Analysis}: Details the data structure, preprocessing steps, and initial analysis of the network properties.
+    
+    \item \textbf{Centrality Analysis}: Presents a comprehensive analysis of different centrality measures and their implications.
+    
+    \item \textbf{Discussions and Results}: Synthesizes the findings and discusses their implications for understanding urban networks.
+\end{enumerate}
+
+\section{Methodological Framework}
+The analysis employs graph theory and network science methodologies, utilizing the following key components:
+\begin{itemize}
+    \item Network construction using NetworkX
+    \item Geographic visualization using Cartopy
+    \item Statistical analysis of network properties
+    \item Centrality measure calculations
+    \item Community detection algorithms
+\end{itemize}
+
+This methodological framework allows for a comprehensive examination of the spatial relationships between cities and the underlying structure of the urban network. 

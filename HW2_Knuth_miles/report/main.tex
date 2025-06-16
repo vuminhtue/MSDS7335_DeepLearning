@@ -1,69 +1,32 @@
-\documentclass[12pt]{report}
-\usepackage[utf8]{inputenc}
+\documentclass{report}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{booktabs}
 \usepackage{hyperref}
-\usepackage{float}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{listings}
-\usepackage{xcolor}
+\usepackage{natbib}
 \usepackage{geometry}
-\usepackage{setspace}
+\usepackage{float}
+\usepackage{xcolor}
 
-% Set page margins
-\geometry{
-    a4paper,
-    margin=1in
-}
+\geometry{margin=1in}
 
-% Set line spacing
-\onehalfspacing
-
-% Define code listing style
-\lstset{
-    basicstyle=\ttfamily\small,
-    breaklines=true,
-    frame=single,
-    numbers=left,
-    numberstyle=\tiny,
-    keywordstyle=\color{blue},
-    commentstyle=\color{green!60!black},
-    stringstyle=\color{red},
-    showstringspaces=false
-}
-
-\title{Analysis of the Knuth Miles Dataset: A Transportation Network Study}
-\author{MSDS 7335 Deep Learning}
+\title{Network Analysis of the Knuth Miles Dataset}
+\author{Tue Vu \\ MSDS 7335 Deep Learning - Homework 2}
 \date{\today}
 
 \begin{document}
 
 \maketitle
 
-\begin{abstract}
-This report presents a comprehensive analysis of the Knuth Miles dataset, which contains information about 128 US and Canadian cities from 1949, including their geographic coordinates, populations, and pairwise distances. The study employs graph theory and network analysis techniques to examine the structural properties of the transportation network, identify central cities, and detect natural communities. The analysis reveals insights into the spatial organization of cities and the efficiency of the highway system during this historical period.
-\end{abstract}
-
 \tableofcontents
 \listoffigures
-\listoftables
 
-\chapter{Introduction and Methodology}
-\input{chapters/introduction}
+\include{chapters/introduction}
+\include{chapters/eda}
+\include{chapters/centrality}
+\include{chapters/discussion}
 
-\chapter{Exploratory Data Analysis}
-\input{chapters/eda}
-
-\chapter{Advanced Network Analysis}
-\input{chapters/advanced_analysis}
-
-\chapter{Discussion and Conclusions}
-\input{chapters/conclusions}
-
-\bibliographystyle{plain}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document} 

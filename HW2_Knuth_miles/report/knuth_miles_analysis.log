@@ -1,25 +1,25 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.12)  16 JUN 2025 01:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.12)  16 JUN 2025 00:50
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**/Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/MSDS7335_DeepLearning/HW2_Knuth_miles/report/knuth_miles_analysis.tex
+(/Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/MSDS7335_DeepLearning/HW2_Knuth_miles/report/knuth_miles_analysis.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
-(/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2024/06/29 v1.4n Standard LaTeX document class
+(/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
 (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count196
-\c@chapter=\count197
-\c@section=\count198
-\c@subsection=\count199
-\c@subsubsection=\count266
-\c@paragraph=\count267
-\c@subparagraph=\count268
-\c@figure=\count269
-\c@table=\count270
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
@@ -58,14 +58,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count271
+\inf@bad=\count270
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count272
-\leftroot@=\count273
+\uproot@=\count271
+\leftroot@=\count272
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count274
-\DOTSCASE@=\count275
+\classnum@=\count273
+\DOTSCASE@=\count274
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -78,20 +78,20 @@ LaTeX Info: Redefining \Bigg on input line 724.
 \big@size=\dimen146
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count276
+\macc@depth=\count275
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count277
+\c@MaxMatrixCols=\count276
 \dotsspace@=\muskip17
-\c@parentequation=\count278
-\dspbrk@lvl=\count279
+\c@parentequation=\count277
+\dspbrk@lvl=\count278
 \tag@help=\toks19
-\row@=\count280
-\column@=\count281
-\maxfields@=\count282
+\row@=\count279
+\column@=\count280
+\maxfields@=\count281
 \andhelp@=\toks20
 \eqnshift@=\dimen147
 \alignsep@=\dimen148
@@ -117,12 +117,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen160
 \cmidrulekern=\dimen161
 \defaultaddspace=\dimen162
-\@cmidla=\count283
-\@cmidlb=\count284
+\@cmidla=\count282
+\@cmidlb=\count283
 \@aboverulesep=\dimen163
 \@belowrulesep=\dimen164
-\@thisruleclass=\count285
-\@lastruleclass=\count286
+\@thisruleclass=\count284
+\@lastruleclass=\count285
 \@thisrulewidth=\dimen165
 ) (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
@@ -155,16 +155,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count287
+\c@section@level=\count286
 ) (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count288
+\etb@tempcnta=\count287
 ) (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen166
-\Hy@linkcounter=\count289
-\Hy@pagecounter=\count290
+\Hy@linkcounter=\count288
+\Hy@pagecounter=\count289
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -172,7 +172,7 @@ Now handling font encoding PD1 ...
 ) (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count291
+\Hy@SavedSpaceFactor=\count290
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -185,7 +185,7 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count292
+\c@Hy@tempcnt=\count291
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -197,7 +197,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count293
+\Fld@menulength=\count292
 \Field@Width=\dimen168
 \Fld@charsize=\dimen169
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -211,9 +211,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count294
-\c@Item=\count295
-\c@Hfootnote=\count296
+\Hy@abspage=\count293
+\c@Item=\count294
+\c@Hfootnote=\count295
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -222,8 +222,8 @@ File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count297
-\c@bookmark@seq@number=\count298
+\Fld@listcount=\count296
+\c@bookmark@seq@number=\count297
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -237,15 +237,15 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip55
 \bibsep=\skip56
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count299
+\c@NAT@ctr=\count298
 ) (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count300
-\Gm@cntv=\count301
-\c@Gm@tempcnt=\count302
+\Gm@cnth=\count299
+\Gm@cntv=\count300
+\c@Gm@tempcnt=\count301
 \Gm@bindingoffset=\dimen170
 \Gm@wd@mp=\dimen171
 \Gm@odd@mp=\dimen172
@@ -257,62 +257,46 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@dimlist=\toks23
 ) (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count303
+\c@float@type=\count302
 \float@exts=\toks24
 \float@box=\box54
 \@float@everytoks=\toks25
 \@floatcapt=\box55
-) (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
- (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1365.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count304
+\l__color_backend_stack_int=\count303
 \l__pdf_internal_box=\box56
-) (./main.aux (./chapters/introduction.aux) (./chapters/eda.aux) (./chapters/centrality.aux) (./chapters/discussion.aux))
-\openout1 = `main.aux'.
+)
+No file knuth_miles_analysis.aux.
+\openout1 = `knuth_miles_analysis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
- (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+(/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 17.
- (./main.out) (./main.out)
+Package hyperref Info: Link coloring OFF on input line 16.
 \@outlinefile=\write3
-\openout3 = `main.out'.
+\openout3 = `knuth_miles_analysis.out'.
 
 
 *geometry* driver: auto-detecting
@@ -353,207 +337,56 @@ Package hyperref Info: Link coloring OFF on input line 17.
 
 [1
 
-{/Users/a46791130/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc
+{/Users/a46791130/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+[2]
+
+[3] (./knuth_miles_analysis.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.42 ...rical Contributions}{17}{subsection.4.2.2}
-                                                  % [1
+./knuth_miles_analysis.aux:19: Package natbib Error: Bibliography not compatible with author-year citations.
+(natbib)                Press <return> to continue in numerical citation style.
 
-])
-\tf@toc=\write4
-\openout4 = `main.toc'.
+See the natbib package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...mand\NAT@force@numbers{}\NAT@force@numbers
+                                                  
+Check the bibliography entries for non-compliant syntax,
+or select author-year BibTeX style, e.g. plainnat
 
-
-
-[2] (./main.lof)
-\tf@lof=\write5
-\openout5 = `main.lof'.
-
-
-
-[3
-
-]
-\openout2 = `chapters/introduction.aux'.
-
- (./chapters/introduction.tex
-Chapter 1.
-
-
-[4
-
-
-])
-
-[5]
-\openout2 = `chapters/eda.aux'.
-
- (./chapters/eda.tex
-Chapter 2.
-
-
-[6
-
-
-
-
-]
-<figures/geographic_distribution.png, id=321, 556.9608pt x 270.0489pt>
-File: figures/geographic_distribution.png Graphic file (type png)
-<use figures/geographic_distribution.png>
-Package pdftex.def Info: figures/geographic_distribution.png  used on input line 55.
-(pdftex.def)             Requested size: 375.80544pt x 182.21745pt.
-
-
-[7
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.71     \item M
-                edian population: 68,000 <./figures/geographic_distribution.png>]
-<figures/population_distribution.png, id=329, 570.6921pt x 426.1521pt>
-File: figures/population_distribution.png Graphic file (type png)
-<use figures/population_distribution.png>
-Package pdftex.def Info: figures/population_distribution.png  used on input line 83.
-(pdftex.def)             Requested size: 375.80544pt x 280.624pt.
-
-
-[8
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.101     \item C
-                 ross-continental connections <./figures/population_distribution.png>]
-<figures/longest_distances.png, id=336, 852.3042pt x 425.9112pt>
-File: figures/longest_distances.png Graphic file (type png)
-<use figures/longest_distances.png>
-Package pdftex.def Info: figures/longest_distances.png  used on input line 110.
-(pdftex.def)             Requested size: 375.80544pt x 187.79793pt.
-<figures/shortest_distances.png, id=338, 851.0997pt x 425.9112pt>
-File: figures/shortest_distances.png Graphic file (type png)
-<use figures/shortest_distances.png>
-Package pdftex.def Info: figures/shortest_distances.png  used on input line 134.
-(pdftex.def)             Requested size: 375.80544pt x 188.05788pt.
-
-
-[9
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.138 
-       <./figures/longest_distances.png>])
-
-[10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.25 \include{chapters/eda}
-                            <./figures/shortest_distances.png>]
-\openout2 = `chapters/centrality.aux'.
-
- (./chapters/centrality.tex
-Chapter 3.
-<figures/betweenness_distribution.png, id=350, 505.89pt x 394.5942pt>
-File: figures/betweenness_distribution.png Graphic file (type png)
-<use figures/betweenness_distribution.png>
-Package pdftex.def Info: figures/betweenness_distribution.png  used on input line 37.
-(pdftex.def)             Requested size: 375.80544pt x 293.13309pt.
-
-
-[11
-
-
-
-
-]
-<figures/top_betweenness.png, id=366, 715.2321pt x 426.1521pt>
-File: figures/top_betweenness.png Graphic file (type png)
-<use figures/top_betweenness.png>
-Package pdftex.def Info: figures/top_betweenness.png  used on input line 53.
-(pdftex.def)             Requested size: 375.80544pt x 223.91527pt.
-
-
-[12
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.57 
-      <./figures/betweenness_distribution.png>]
-
-[13
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.88     \item R
-                ockford, IL (0.0010) <./figures/top_betweenness.png>]
-<figures/closeness_distribution.png, id=383, 489.9906pt x 394.5942pt>
-File: figures/closeness_distribution.png Graphic file (type png)
-<use figures/closeness_distribution.png>
-Package pdftex.def Info: figures/closeness_distribution.png  used on input line 95.
-(pdftex.def)             Requested size: 375.80544pt x 302.65231pt.
-<figures/top_closeness.png, id=385, 715.473pt x 426.1521pt>
-File: figures/top_closeness.png Graphic file (type png)
-<use figures/top_closeness.png>
-Package pdftex.def Info: figures/top_closeness.png  used on input line 111.
-(pdftex.def)             Requested size: 375.80544pt x 223.83723pt.
-
-
-[14
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.115 
-       <./figures/closeness_distribution.png>]
-
-[15
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.151 \end{itemize}
-                    <./figures/top_closeness.png>])
-
-[16]
-\openout2 = `chapters/discussion.aux'.
-
- (./chapters/discussion.tex
-Chapter 4.
-
-
-[17
-
-
-
-
-]
-
-[18])
-
-[19]
-No file main.bbl.
-(./main.aux (./chapters/introduction.aux) (./chapters/eda.aux) (./chapters/centrality.aux) (./chapters/discussion.aux))
+)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9BBF44CF194E9D9786D214AFC393AE03;8348.
+
+
+Package rerunfilecheck Warning: File `knuth_miles_analysis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `knuth_miles_analysis.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  A067B84B33452AAE2279556F428761CC;2227.
  ) 
 Here is how much of TeX's memory you used:
- 10611 strings out of 475290
- 165809 string characters out of 5767851
- 578916 words of memory out of 5000000
- 33242 multiletter control sequences out of 15000+600000
- 565167 words of font info for 61 fonts, out of 8000000 for 9000
+ 9804 strings out of 475290
+ 151958 string characters out of 5767851
+ 557334 words of memory out of 5000000
+ 32564 multiletter control sequences out of 15000+600000
+ 564108 words of font info for 57 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,6n,79p,435b,531s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (20 pages, 1509400 bytes).
+ 75i,6n,79p,625b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></Users/a46791130/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on knuth_miles_analysis.pdf (3 pages, 120690 bytes).
 PDF statistics:
- 497 PDF objects out of 1000 (max. 8388607)
- 431 compressed objects within 5 object streams
- 105 named destinations out of 1000 (max. 500000)
- 441 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 89 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 23 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
