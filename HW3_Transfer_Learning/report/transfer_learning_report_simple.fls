@@ -1,8 +1,8 @@
-PWD /Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/Homework/HW3/report
+PWD /Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/MSDS7335_DeepLearning/HW3_Transfer_Learning/report
 INPUT /Users/a46791130/Library/TinyTeX/texmf.cnf
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/web2c/texmf.cnf
 INPUT /Users/a46791130/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/Homework/HW3/report/transfer_learning_report_simple.tex
+INPUT /Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/MSDS7335_DeepLearning/HW3_Transfer_Learning/report/transfer_learning_report_simple.tex
 OUTPUT transfer_learning_report_simple.log
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
