@@ -1,0 +1,126 @@
+REQUIRED IMAGES FOR LATEX REPORT
+=====================================
+
+The LaTeX report references several figures that should be created for a complete document. 
+Below are the specifications for each required image:
+
+1. ARCHITECTURE DIAGRAM (architecture_diagram.png)
+   --------------------------------------------------
+   File: architecture_diagram.png
+   Size: 800x600 pixels (recommended)
+   Content: High-level system architecture showing:
+   - Ollama (Local LLM box)
+   - Langchain (RAG Framework box)
+   - ChromaDB (Vector Database cylinder)
+   - Gradio (Web Interface box)
+   - Arrows showing data flow between components
+   - User interaction arrows
+   - Document input and query output flows
+
+2. RAG WORKFLOW DIAGRAM (rag_workflow.png)
+   ----------------------------------------
+   File: rag_workflow.png
+   Size: 1000x700 pixels (recommended)
+   Content: Detailed process flow showing:
+   - Document Upload → Text Extraction → Chunking
+   - Embedding Generation → Vector Storage
+   - Query Input → Similarity Search → Context Retrieval
+   - LLM Generation → Response Output
+   - Include ChromaDB cleanup process
+   - Show parallel processing where applicable
+
+3. CURSOR WORKFLOW DIAGRAM (cursor_workflow.png)
+   -----------------------------------------------
+   File: cursor_workflow.png
+   Size: 900x600 pixels (recommended)
+   Content: AI-assisted development process showing:
+   - Natural Language Requirements (input box)
+   - Cursor.com AI Processing (brain/AI icon)
+   - Code Generation (code snippets)
+   - Integration & Testing (gear icons)
+   - Deployment (cloud/server icons)
+   - Feedback loop arrows
+
+ALTERNATIVE SOLUTIONS:
+=====================
+
+If you cannot create these images immediately, you have several options:
+
+1. COMMENT OUT FIGURE REFERENCES:
+   - Open MSDS7335_Final_Report.tex
+   - Find the \includegraphics lines
+   - Comment them out with % at the beginning
+   - Keep the figure captions for reference
+
+2. USE PLACEHOLDER TEXT:
+   Replace \includegraphics commands with:
+   
+   \begin{center}
+   \textbf{[Figure Placeholder: Architecture Diagram]}\\
+   \textit{High-level system architecture showing integration of Ollama, Langchain, ChromaDB, and Gradio}
+   \end{center}
+
+3. CREATE SIMPLE DIAGRAMS:
+   - Use draw.io (diagrams.net) - free online diagramming tool
+   - Use Lucidchart for professional diagrams
+   - Use PowerPoint or Google Slides and export as PNG
+   - Use LaTeX's TikZ package for programmatic diagrams
+
+EXAMPLE TIKZ CODE FOR SIMPLE DIAGRAM:
+====================================
+
+You can replace image includes with TikZ code directly in LaTeX:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=2cm]
+\node (user) [rectangle, draw] {User};
+\node (gradio) [rectangle, draw, right of=user] {Gradio UI};
+\node (langchain) [rectangle, draw, right of=gradio] {Langchain};
+\node (ollama) [rectangle, draw, below of=langchain] {Ollama};
+\node (chromadb) [cylinder, draw, above of=langchain] {ChromaDB};
+
+\draw [arrow] (user) -- (gradio);
+\draw [arrow] (gradio) -- (langchain);
+\draw [arrow] (langchain) -- (ollama);
+\draw [arrow] (langchain) -- (chromadb);
+\end{tikzpicture}
+\caption{Simplified system architecture}
+\end{figure}
+
+(Note: Add \usepackage{tikz} to the preamble for TikZ support)
+
+RECOMMENDED TOOLS FOR DIAGRAM CREATION:
+======================================
+
+1. **Draw.io (diagrams.net)** - Free, web-based
+   - Perfect for architecture diagrams
+   - Professional templates available
+   - Export to PNG, PDF, SVG
+
+2. **Lucidchart** - Professional diagramming
+   - Excellent for complex workflows
+   - Collaboration features
+   - High-quality exports
+
+3. **Microsoft Visio** - Enterprise diagramming
+   - Advanced templates
+   - Integration with Office suite
+
+4. **Creately** - Online diagramming
+   - Good selection of templates
+   - Easy to use interface
+
+5. **LaTeX TikZ** - Programmatic diagrams
+   - Perfect integration with LaTeX
+   - Scalable vector graphics
+   - Professional appearance
+
+PRIORITY ORDER:
+==============
+
+1. Create architecture_diagram.png (most important)
+2. Create rag_workflow.png (detailed workflow)
+3. Create cursor_workflow.png (AI development process)
+
+The report will compile successfully without images, but including them significantly enhances the professional appearance and clarity of the technical content.
