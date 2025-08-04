@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.12)  4 AUG 2025 00:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.12)  4 AUG 2025 18:50
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/FinalProject/report/MSDS7335_Final_Report_Minimal.tex
-(/Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/FinalProject/report/MSDS7335_Final_Report_Minimal.tex
+**MSDS7335_Final_Report_Minimal.tex
+(./MSDS7335_Final_Report_Minimal.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
 (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -211,8 +210,14 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+! Undefined control sequence.
+<recently read> \Automated 
+                           
+l.39 \maketitle
+               
+? 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
- (/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
@@ -234,7 +239,7 @@ Overfull \hbox (3.2185pt too wide) in paragraph at lines 55--56
 [3]
 
 [4]
-<plots/Fig1.png, id=20, 963.6pt x 542.025pt>
+<plots/Fig1.png, id=21, 963.6pt x 542.025pt>
 File: plots/Fig1.png Graphic file (type png)
 <use plots/Fig1.png>
 Package pdftex.def Info: plots/Fig1.png  used on input line 95.
@@ -248,7 +253,7 @@ Overfull \hbox (15.01413pt too wide) in paragraph at lines 168--169
 []\T1/cmr/m/n/12 The em-bed-ding strat-egy em-ploys the mxbai-embed-large model to gen-er-ate high-dimensional
  []
 
-<plots/Langchain.png, id=28, 967.615pt x 329.23pt>
+<plots/Langchain.png, id=29, 967.615pt x 329.23pt>
 File: plots/Langchain.png Graphic file (type png)
 <use plots/Langchain.png>
 Package pdftex.def Info: plots/Langchain.png  used on input line 198.
@@ -265,27 +270,38 @@ Overfull \hbox (19.0907pt too wide) in paragraph at lines 229--230
 
 
 [9]
-<plots/HPC.png, id=41, 963.6pt x 542.025pt>
+<plots/HPC.png, id=42, 963.6pt x 542.025pt>
 File: plots/HPC.png Graphic file (type png)
 <use plots/HPC.png>
 Package pdftex.def Info: plots/HPC.png  used on input line 286.
-(pdftex.def)             Requested size: 422.77664pt x 237.80527pt.
+(pdftex.def)             Requested size: 516.73338pt x 290.6711pt.
+
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 286--287
+ [][] 
+ []
+
 
 
 [10]
+<plots/AWS.png, id=46, 963.6pt x 542.025pt>
+File: plots/AWS.png Graphic file (type png)
+<use plots/AWS.png>
+Package pdftex.def Info: plots/AWS.png  used on input line 298.
+(pdftex.def)             Requested size: 516.73338pt x 290.6711pt.
+
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 298--299
+ [][] 
+ []
+
+
 
 [11 <./plots/HPC.png>]
 
-[12]
+[12 <./plots/AWS.png>]
 
 [13]
 
 [14]
-Underfull \hbox (badness 6493) in paragraph at lines 420--421
-[]\T1/cmr/m/n/12 Cursor Team. (2024). \T1/cmr/m/it/12 Cur-sor: The AI-first Code Ed-i-tor\T1/cmr/m/n/12 . Re-trieved from
- []
-
-
 
 [15] (./MSDS7335_Final_Report_Minimal.aux)
  ***********
@@ -295,17 +311,17 @@ L3 programming layer <2024-11-02>
  ) 
 Here is how much of TeX's memory you used:
  3255 strings out of 475290
- 47842 string characters out of 5767851
- 441659 words of memory out of 5000000
- 26108 multiletter control sequences out of 15000+600000
+ 47605 string characters out of 5767851
+ 441647 words of memory out of 5000000
+ 26109 multiletter control sequences out of 15000+600000
  572512 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 57i,9n,65p,964b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk>
-Output written on MSDS7335_Final_Report_Minimal.pdf (15 pages, 497060 bytes).
+ 57i,9n,65p,888b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk>
+Output written on MSDS7335_Final_Report_Minimal.pdf (15 pages, 733930 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 382 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

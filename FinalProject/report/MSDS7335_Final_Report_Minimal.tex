@@ -15,8 +15,8 @@
 % Title page information
 \title{
     \vspace{2in}
-    \textbf{\Large Automated RAG Chatbot Development using Cursor IDE: \\
-    A Comprehensive Framework for Secure Local Data Querying} \\
+    \textbf{\Automated RAG Chatbot Development using Cursor IDE:\\
+    A Comprehensive Framework for Secure Data Querying} \\
     \vspace{0.5in}
     \large MSDS 7335 - Machine Learning II \\
     Final Project Report \\
@@ -217,7 +217,7 @@ The data processing pipeline implements a robust error handling and recovery mec
 
 The development of complex machine learning applications traditionally requires extensive expertise across multiple domains, significant development time, and careful coordination of various technological components. The emergence of AI-powered development environments, particularly Cursor.com, has fundamentally transformed this paradigm by enabling automated code generation, intelligent debugging, and comprehensive project scaffolding.
 
-\subsection{Cursor.com Development Environment}
+\subsection{Cursor Development Environment}
 
 Cursor represents a revolutionary approach to software development, combining the power of large language models with traditional integrated development environment (IDE) features. The platform provides several key capabilities that proved instrumental in this project:
 
@@ -283,7 +283,7 @@ For Open OnDemand, only the users within SSO (Single Sign-On) can access the app
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{plots/HPC.png}
+    \includegraphics[width=1.1\textwidth]{plots/HPC.png}
     \caption{HPC deployment via Open OnDemand}
     \label{fig:OOD}
 \end{figure}
@@ -293,11 +293,16 @@ For Open OnDemand, only the users within SSO (Single Sign-On) can access the app
 Cloud deployment through Amazon Web Services provides the ultimate scalability and accessibility while maintaining security through proper configuration of network and access controls.
 This is the most scalable deployment option and can be accessed from anywhere with internet connection as long as the user maintain the connection.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{plots/AWS.png}
+    \caption{Cloud deployment via AWS EC2}
+    \label{fig:AWS}
+\end{figure}
+
 \subsection{Performance Benchmarking}
 
-\subsubsection{Development Time Comparison}
-
-A comparative analysis of development time demonstrates the significant efficiency gains achieved through AI-assisted development:
+A comparative analysis of development time demonstrates the significant efficiency gains (80\%) achieved through AI-assisted development:
 
 \begin{center}
 \begin{tabular}{|l|c|c|}
@@ -320,23 +325,19 @@ Documentation & 16 & 0.5 \\
 
 \section{Discussion and Conclusion}
 
-\subsection{Project Outcomes and Achievements}
+\subsection{Discussion}
 
-This project successfully demonstrated the feasibility and effectiveness of using AI-assisted development tools, specifically Cursor.com, to create a comprehensive RAG chatbot system for secure local data querying. The final implementation represents a significant achievement in several key areas.
-
-\subsubsection{Technical Accomplishments}
+This project successfully demonstrated the feasibility and effectiveness of using AI-assisted development tools, specifically Cursor IDE, to create a comprehensive RAG chatbot system for secure local data querying. The final implementation represents a significant achievement in several key areas.
 
 The developed system successfully integrates multiple complex technologies into a cohesive, user-friendly application:
 
-\begin{enumerate}
+\begin{itemize}
     \item \textbf{Complete Local Operation}: The system operates entirely without external API dependencies, ensuring complete data privacy and security
     \item \textbf{Multi-Model Support}: Successfully implements real-time switching between four different language models, providing flexibility for various use cases
     \item \textbf{Robust Document Processing}: Handles multiple file formats with sophisticated text extraction and chunking algorithms
     \item \textbf{Efficient Vector Storage}: Implements advanced ChromaDB management with automatic cleanup and conflict resolution
     \item \textbf{Intuitive User Interface}: Provides a modern, responsive web interface accessible to non-technical users
-\end{enumerate}
-
-\subsubsection{Development Efficiency Gains}
+\end{itemize}
 
 The AI-assisted development approach yielded remarkable efficiency improvements:
 
@@ -347,11 +348,7 @@ The AI-assisted development approach yielded remarkable efficiency improvements:
     \item \textbf{Comprehensive Documentation}: Automated generation of user guides and technical documentation
 \end{itemize}
 
-\subsection{The Necessity and Impact of Cursor.com}
-
-\subsubsection{Paradigm Shift in Development Methodology}
-
-The use of Cursor.com in this project represents more than just a tool adoption; it signifies a fundamental paradigm shift in how complex machine learning applications can be developed. Traditional development of RAG systems requires deep expertise across multiple domains:
+The use of Cursor in this project represents more than just a tool adoption; it signifies a fundamental paradigm shift in how complex machine learning applications can be developed. Traditional development of RAG systems requires deep expertise across multiple domains:
 
 \begin{itemize}
     \item Natural Language Processing and transformer architectures
@@ -361,76 +358,47 @@ The use of Cursor.com in this project represents more than just a tool adoption;
     \item Security and privacy implementation
 \end{itemize}
 
-Cursor.com democratizes this development process by abstracting away much of the technical complexity while maintaining professional-grade code quality and architectural best practices.
+Cursor democratizes this development process by abstracting away much of the technical complexity while maintaining professional-grade code quality and architectural best practices.
 
-\subsubsection{Critical Advantages of AI-Assisted Development}
+Several factors make Cursor not just useful but \textit{necessary} for this type of project:
 
-Several factors make Cursor.com not just useful but \textit{necessary} for this type of project:
-
-\begin{enumerate}
+\begin{itemize}
     \item \textbf{Knowledge Integration}: Automatically incorporates best practices from multiple domains without requiring extensive research
     \item \textbf{Rapid Prototyping}: Enables quick iteration and testing of different architectural approaches
     \item \textbf{Error Prevention}: Proactively identifies and prevents common integration issues
     \item \textbf{Consistency Maintenance}: Ensures consistent coding patterns and documentation throughout the project
     \item \textbf{Future-Proofing}: Incorporates latest framework versions and security practices
-\end{enumerate}
+\end{itemize}
 
-\subsection{Deployment Strategy Validation}
+The project also successfully validated three distinct deployment strategies, each addressing different organizational needs and constraints:
 
-The project successfully validated three distinct deployment strategies, each addressing different organizational needs and constraints:
-
-\begin{enumerate}
+\begin{itemize}
     \item \textbf{Local PC Deployment}: Ideal for individual users and small teams requiring immediate, secure access to document querying capabilities
     \item \textbf{HPC Deployment}: Suitable for academic institutions and research organizations with existing high-performance computing infrastructure
     \item \textbf{Cloud Deployment}: Optimal for organizations requiring scalable, enterprise-grade solutions with global accessibility
-\end{enumerate}
+\end{itemize}
 
 \subsection{Limitations and Future Work}
 
 While the project achieved its primary objectives, several limitations were identified:
 
 \begin{enumerate}
-    \item \textbf{Model Size Constraints}: Current implementation focuses on smaller models (1-3B parameters) due to hardware constraints
-    \item \textbf{Document Format Support}: Limited to PDF and text files, with potential for expansion to additional formats
+    \item \textbf{Model Size Constraints}: Current implementation focuses on smaller models (1-3B parameters) due to hardware constraints if running on local PC or deployment on cloud. By running on HPC, the model size can be increased to 27B or 70B for better performance.
+    \item \textbf{Document Format Support}: Limited to PDF and text files, with potential for expansion to additional formats. Future improvement can be added with Image (using vision LLMs), audio/video (using OpenAI Whisper).
     \item \textbf{Scalability Testing}: Limited testing of concurrent user scenarios and large document collections
     \item \textbf{Advanced RAG Techniques}: Implementation uses basic retrieval strategies without advanced techniques like query rewriting or re-ranking
 \end{enumerate}
 
 \subsection{Conclusion}
 
-This project successfully demonstrates that AI-assisted development tools, particularly Cursor.com, represent a transformative force in machine learning application development. The creation of a comprehensive RAG chatbot system in a fraction of the traditional development time, while maintaining professional code quality and comprehensive functionality, validates the potential of these tools to revolutionize how we approach complex software projects.
+This project successfully demonstrates that AI-assisted development tools, particularly Cursor, represent a transformative force in machine learning application development. The creation of a comprehensive RAG chatbot system in a fraction of the traditional development time, while maintaining professional code quality and comprehensive functionality, validates the potential of these tools to revolutionize how we approach complex software projects.
 
-The necessity of Cursor.com in this workflow extends beyond mere convenience—it enables a fundamental shift in how complex AI systems can be developed, making sophisticated machine learning applications accessible to a broader range of practitioners while maintaining security, privacy, and performance standards.
+The necessity of Cursor in this workflow extends beyond mere convenience. It enables a fundamental shift in how complex AI systems can be developed, making sophisticated machine learning applications accessible to a broader range of practitioners while maintaining security, privacy, and performance standards.
 
 The successful implementation of multiple deployment strategies demonstrates the practical viability of the developed system across various organizational contexts, from individual researchers to enterprise environments. The local deployment capability, in particular, addresses critical privacy and security concerns that have limited the adoption of AI systems in sensitive data environments.
 
 As AI-assisted development tools continue to evolve, they will likely become indispensable components of the modern developer's toolkit, enabling faster innovation, higher quality code, and more accessible development processes. This project serves as a proof of concept for the transformative potential of these tools in academic and professional machine learning development.
 
-The future of AI development lies not in replacing human developers, but in augmenting their capabilities, enabling them to focus on high-level problem solving and innovation while AI assistants handle the implementation details. This project demonstrates that this future is not just possible—it is available today.
-
-\newpage
-
-% Simple bibliography without special packages
-\begin{thebibliography}{99}
-
-\bibitem{lewis2020retrieval}
-Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive nlp tasks. \textit{Advances in neural information processing systems}, 33, 9459-9474.
-
-\bibitem{cursor2024}
-Cursor Team. (2024). \textit{Cursor: The AI-first Code Editor}. Retrieved from https://cursor.com
-
-\bibitem{ollama2024}
-Ollama Team. (2024). \textit{Ollama: Get up and running with large language models locally}. Retrieved from https://ollama.ai
-
-\bibitem{chase2023langchain}
-Chase, H. (2023). \textit{LangChain: Building applications with LLMs through composability}. GitHub repository.
-
-\bibitem{chromadb2024}
-Chroma Team. (2024). \textit{Chroma: The AI-native open-source embedding database}. Retrieved from https://www.trychroma.com
-
-\bibitem{abid2019gradio}
-Abid, A., et al. (2019). Gradio: Hassle-free sharing and testing of ML models in the wild. In \textit{International conference on machine learning} (pp. 106-116). PMLR.
-
-\end{thebibliography}
+The future of AI development lies not in replacing human developers, but in augmenting their capabilities, enabling them to focus on high-level problem solving and innovation while AI assistants handle the implementation details. This project demonstrates that this future is not just possible - it is available today.
 
 \end{document}

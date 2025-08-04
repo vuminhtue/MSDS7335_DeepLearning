@@ -1,8 +1,8 @@
-PWD /Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/FinalProject/report
+PWD /Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/MSDS7335_DeepLearning/FinalProject/report
 INPUT /Users/a46791130/Library/TinyTeX/texmf.cnf
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/web2c/texmf.cnf
 INPUT /Users/a46791130/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/FinalProject/report/MSDS7335_Final_Report_Minimal.tex
+INPUT /Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/MSDS7335_DeepLearning/FinalProject/report/MSDS7335_Final_Report_Minimal.tex
 OUTPUT MSDS7335_Final_Report_Minimal.log
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -66,7 +66,6 @@ INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm2074.tfm
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx2074.tfm
-INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -89,6 +88,7 @@ OUTPUT MSDS7335_Final_Report_Minimal.pdf
 INPUT /Users/a46791130/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
+INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT ./plots/Fig1.png
 INPUT ./plots/Fig1.png
@@ -123,12 +123,18 @@ INPUT ./plots/HPC.png
 INPUT ./plots/HPC.png
 INPUT ./plots/HPC.png
 INPUT ./plots/HPC.png
+INPUT ./plots/AWS.png
+INPUT ./plots/AWS.png
+INPUT ./plots/AWS.png
+INPUT ./plots/AWS.png
+INPUT ./plots/AWS.png
 INPUT /Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm
 INPUT MSDS7335_Final_Report_Minimal.aux
 INPUT /Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk
 INPUT /Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
 INPUT /Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
+INPUT /Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
 INPUT /Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk
 INPUT /Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
 INPUT /Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk
-INPUT /Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
+INPUT /Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk

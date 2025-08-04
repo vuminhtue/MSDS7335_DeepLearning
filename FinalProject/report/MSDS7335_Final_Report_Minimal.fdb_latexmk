@@ -1,6 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1754286542.17292 "/Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/FinalProject/report/MSDS7335_Final_Report_Minimal.tex" "MSDS7335_Final_Report_Minimal.pdf" "MSDS7335_Final_Report_Minimal" 1754286542.61984 0
-  "/Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/FinalProject/report/MSDS7335_Final_Report_Minimal.tex" 1754286541.95603 26464 2cdcfb90f34a4c27eea0a03b1b2ad0fa ""
+["pdflatex"] 1754340372.46704 "/Users/a46791130/Documents/SMU/SMU_MSDS/8.MSDS_7335_ML2/MSDS7335_DeepLearning/FinalProject/report/MSDS7335_Final_Report_Minimal.tex" "MSDS7335_Final_Report_Minimal.pdf" "MSDS7335_Final_Report_Minimal" 1754340373.06296 2
   "/Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
   "/Users/a46791130/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1136768653 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
@@ -59,14 +58,16 @@
   "/Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1747369495.91498 31928 8e04c0bbfd1eb47faafec9edb15e16ab ""
   "/Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1747369496.48741 40112 1b5eaa514b7ec107affe6cba6cfb7ef8 ""
   "/Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1747369497.60177 49076 db4b705733db3e1cf310c66ad733506e ""
+  "/Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk" 1748381960.81317 58988 9854a4a18d5689f7491e3bc55806334c ""
   "/Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk" 1747369498.13923 28416 8801969f03856c9f1c7cc253e154ca8d ""
   "/Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk" 1747369499.23495 34296 fe814737192149c2d2c3e84621b235c6 ""
   "/Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk" 1753241378.24053 39096 f10f072b0b710407b85348cd5cd9ad51 ""
   "/Users/a46791130/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1747368534.81626 14040 346fd340dd83c9373f3ba5e9d6e70ab3 ""
   "/Users/a46791130/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1734037200 1918231 8ea63c071a92f911dd80247e074a259b ""
   "/Users/a46791130/Library/TinyTeX/texmf.cnf" 1725779365.75734 708 85fd07691b6294ba94c59dbc62380410 ""
-  "MSDS7335_Final_Report_Minimal.aux" 1754286542.55029 4203 5d2a2389aca80cf63c309f0de55c69fc "pdflatex"
-  "MSDS7335_Final_Report_Minimal.tex" 1754286541.95603 26464 2cdcfb90f34a4c27eea0a03b1b2ad0fa ""
+  "MSDS7335_Final_Report_Minimal.aux" 1754340373.00385 3266 5597ef2f50e7d7e66d4815b4973d0521 "pdflatex"
+  "MSDS7335_Final_Report_Minimal.tex" 1754340371.44175 25392 ad15ab33bf19ba81cc00944042fed533 ""
+  "plots/AWS.png" 1754340329.59057 269529 2d0292fcff59f434d3cf6bf2268b04d6 ""
   "plots/Fig1.png" 1754253254.46091 90075 04d0824905c81513ffe7a7e53cdfb77f ""
   "plots/HPC.png" 1754286379.77137 94208 f2eb7f0c6925f5ff5bba42926fbed1a9 ""
   "plots/Langchain.png" 1754251682.25387 300768 689fa9f6f27873caa3eba2529d4abeac ""
